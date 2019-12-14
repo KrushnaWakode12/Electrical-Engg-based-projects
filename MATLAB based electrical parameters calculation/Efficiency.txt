@@ -1,0 +1,37 @@
+disp('Based on efficiency of transformers')
+disp('To find:')
+disp('1.Efficiency')
+disp('2.Losses')
+disp('3.Power factor')
+a=input('Select the choice: ')
+switch(a)
+case 1
+x=input('Load ratio: ')
+kva=input('Full load kva rating: ')
+pf=input('Power factor: ')
+loss=input('Total loss: ')
+n=(x*kva*pf)/((x*kva*pf)+loss)
+pn=n*100
+disp('Efficiency is: ')
+n
+disp('Pecentage efficiency is: ')
+pn
+case 2
+x=input('Load ratio: ')
+kva=input('Full load kva rating: ')
+pf=input('Power factor: ')
+n=input('Efficiency: ')
+loss=((x*kva*pf)/n)-(x*kva*pf)
+disp('Total loss in system is: ')
+loss
+case 3
+x=input('Load ratio: ')
+kva=input('Full load kva rating: ')
+loss=input('Total loss: ')
+n=input('Efficiency: ')
+pf=(((x*kva)+loss)*n)/(x*kva)
+disp('Power factor is: ')
+pf
+otherwise
+('Wrong option')
+end

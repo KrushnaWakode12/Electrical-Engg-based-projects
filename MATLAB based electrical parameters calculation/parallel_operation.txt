@@ -1,0 +1,29 @@
+disp('Based on parallel operation of transformers, on load sharing')
+disp('Whether: ')
+disp('1.Parameters in polar form')
+disp('2.Parameters in rectangular form')
+a=input('Select th choice: ')
+switch(a)
+case 1
+s=input('Total load: ')
+d=input('Load phase angle: ')
+z=input('Total impedence: ')
+x=input('Resultant phase angle: ')
+a=input('Given impedence: ')
+b=input('Given phase impedence: ')
+value=a*s/z
+angle=b-x+d
+disp('So, the load shared is: ')
+value
+disp('at the phase angle of: ')
+angle
+case 2
+s=input('Total load: ')
+z=input('Total impedence: ')
+a=input('Given impedence: ')
+value=s*a/z
+disp('So, the load shared is: ')
+value
+otherwise
+disp('Wrong choice')
+end
